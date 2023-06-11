@@ -1,0 +1,221 @@
+/*
+从淡樱镜像站扒拉来改的,随便用吧
+希望能有帮助
+*/
+
+body {
+    background: linear-gradient(to left bottom, #cffcf8, #fccfd7);
+}
+
+.navigation {
+    background: rgba(255, 143, 202, 0.85);
+    width: 100%;
+    box-shadow: 0 0 5px rgba(255, 120, 228, 0.25);
+    padding: 0;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    overflow: hidden;
+}
+
+.main {
+    margin: 60px 0 0 0;
+    width: 100%;
+    height: auto;
+}
+
+.navi {
+    width: 100%;
+    overflow: hidden;
+}
+
+.navi li {
+    display: inline;
+    text-align: center;
+    width: 70px;
+    font-size: 19px;
+    margin-right: 20px;
+}
+
+.navi-logo {
+    width: 28px;
+    height: 28px;
+    float: left;
+    margin: 0;
+}
+
+.navi li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.search {
+    right: 0;
+}
+
+.navi-blank {
+    height: 65px;
+    width: 100%;
+}
+
+.banner {
+    height: 381px;
+    width: 100%;
+    align-items: center;
+    overflow: hidden;
+    background: gray;
+}
+
+.banner-txt {
+    width: 100%;
+    height: 381px;
+    position: absolute;
+    z-index: 90;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.banner-txt .banner-title {
+    color: #000000;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+}
+
+.banner-txt .banner-subtitle {
+    color: #484848;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.banner ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.banner ul li {
+    width: 100%;
+    transition: 1s;
+    opacity: 0;
+    background: lightgray;
+    margin: 0;
+}
+
+.banner ul li img {
+    width: 100%;
+    height: 381px;
+    position: absolute;
+    z-index: 1;
+}
+
+.content .content-block .content-title {
+    background: rgba(209, 142, 255, 0.55);
+    box-shadow: 0 0 5px rgba(227, 144, 255, 0.35);
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 60px;
+    z-index: 90;
+    height: 60px;
+    overflow: hidden;
+}
+
+.content .content-block .content-body {
+    padding: 0 60px 0 60px;
+    max-width: 1600px;
+    margin: 20px auto;
+}
+
+.institution-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.institution-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.institution-list .institution-block {
+    width: 33%;
+    text-decoration: none;
+}
+
+.institution-list .institution-block-card {
+    border: 2px solid rgba(255, 154, 235, 0.7);
+    box-shadow: 1px 1px 5px rgba(255, 154, 235, 0.5);
+    margin: 20px;
+}
+
+.institution-list .institution-block-card:hover {
+    border: 2px solid rgba(255, 154, 235, 1);
+    box-shadow: 1px 1px 20px rgba(255, 154, 235, 0.8);
+    transition: 0.5s;
+}
+
+.institution-list .institution-block-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.institution-list .institution-block-card .card-txt {
+    padding: 15px;
+    background: #f5f5f5;
+}
+
+.institution-list .institution-block-card .card-txt h1, p {
+    margin: 0;
+}
+
+.institution-info {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.institution-info a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.show {
+    display:block;
+}
+.hide {
+    display: none;
+}
+
+.footer {
+    background: rgba(250, 126, 192, 0.25);
+    padding: 25px;
+    width: auto;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    margin-bottom: auto;
+    clear: both;
+    text-align: center;
+}
+
+.search {
+    display: inline;
+    float: right;
+    margin-right: 4rem;
+}
