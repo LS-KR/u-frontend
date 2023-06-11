@@ -36,11 +36,16 @@ window.addEventListener('DOMContentLoaded', function() {
                     var d = c.lastChild;
                     d.classList.add('institution-info');
                     d.appendChild(document.createElement('a'));
-                    d.lastChild.textContent = '地址' + e[3];
+                    d.lastChild.textContent = '地址  ' + e[3];
                     d.appendChild(document.createElement('a'));
-                    d.lastChild.textContent = '来源' + e[4];
+                    d.lastChild.textContent = '来源  ' + e[4];
                     d.appendChild(document.createElement('a'));
-                    d.lastChild.textContent = '可能存在对跨性别者的迫害' + e[5];
+                    if (e[5] == "UNKNOWN")
+                        d.lastChild.textContent = '可能存在的对跨性别者的迫害未知';
+                    else if (e[5] == "TRUE")
+                        d.lastChild.textContent = '存在对跨性别者的迫害';
+                    else
+                        d.lastChild.textContent = '可能存在对跨性别者的迫害:\n\t' + e[5];
                     if (e[6] != "NONE")
                     {
                         d.appendChild(document.createElement('a'));
@@ -48,7 +53,7 @@ window.addEventListener('DOMContentLoaded', function() {
                         d.lastChild.href = e[6];
                     }
                     d.appendChild(document.createElement('a'));
-                    d.lastChild.textContent = '待审核' + e[7];
+                    d.lastChild.textContent = '待审核: ' + e[7];
                     b.addEventListener("click", (event) => {
                         ShowInfo(b.children.item(0).lastChild);
                     }, false);
