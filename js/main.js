@@ -41,9 +41,12 @@ window.addEventListener('DOMContentLoaded', function() {
                     d.lastChild.textContent = '来源' + e[4];
                     d.appendChild(document.createElement('a'));
                     d.lastChild.textContent = '可能存在对跨性别者的迫害' + e[5];
-                    d.appendChild(document.createElement('a'));
-                    d.lastChild.textContent = '相关证据';
-                    d.lastChild.href = e[6];
+                    if (e[6] != "NONE")
+                    {
+                        d.appendChild(document.createElement('a'));
+                        d.lastChild.textContent = '相关证据';
+                        d.lastChild.href = e[6];
+                    }
                     d.appendChild(document.createElement('a'));
                     d.lastChild.textContent = '待审核' + e[7];
                     b.addEventListener("click", (event) => {
