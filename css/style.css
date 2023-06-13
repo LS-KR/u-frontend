@@ -7,6 +7,18 @@ body {
     background: linear-gradient(to left bottom, #cffcf8, #fccfd7);
 }
 
+a {
+    line-height: 0px;
+}
+
+h3 {
+    line-height: 2px;
+}
+
+h4 {
+    line-height: 2px;
+}
+
 .navigation {
     background: rgba(255, 143, 202, 0.85);
     width: 100%;

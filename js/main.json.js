@@ -33,38 +33,27 @@ window.addEventListener('DOMContentLoaded', function() {
             b0.classList.add('card-txt');
             b.appendChild(b0);
             var c = b.children.item(0);
-            c.appendChild(document.createElement('h1'));
-            s = "";
             names.forEach(function(e, i) {
-                if (i == 0)
-                    s = (e != undefined) ? e : "";
-                else
-                    s = s.concat('\n', e);
+                c.appendChild(document.createElement('h1'));
+                c.lastChild.textContent = e;
             });
-            c.lastChild.textContent = s;
-            c.appendChild(document.createElement('h4'));
-            s = "";
             sites.forEach(function(e, i) {
-                if (i == 0)
-                    s = (e != undefined) ? e : "";
-                else
-                    s = s.concat('\n', e);
+                c.appendChild(document.createElement('h3'))
+                c.lastChild.textContent = e;
             });
-            c.lastChild.textContent = s;
             c.appendChild(document.createElement('a'));
             c.lastChild.textContent = '点击展开详情';
             c.appendChild(document.createElement('div'));
             var d = c.lastChild;
             d.classList.add('institution-info');
-            d.appendChild(document.createElement('a'));
-            s = "";
+            d.appendChild(document.createElement('h4'));
+            d.lastChild.textContent = '地址: \n';
             locations.forEach(function(e, i) {
-                if (i == 0)
-                    s = (e != undefined) ? e : "";
-                else
-                    s = s.concat('\n', e);
-            });
-            d.lastChild.textContent = '地址: \n' + s;
+                d.appendChild(document.createElement('a'));
+                d.lastChild.textContent = e;
+            })
+            d.appendChild(document.createElement('h4'));
+            d.lastChild.textContent = '来源: '
             d.appendChild(document.createElement('a'));
             s = "";
             sources.forEach(function(e, i) {
@@ -73,7 +62,7 @@ window.addEventListener('DOMContentLoaded', function() {
                 else 
                     s = s.concat('\n', e);
             });
-            d.lastChild.textContent += '来源: \n' + s;
+            d.lastChild.textContent = s;
             if ((persecution_known != null) && (persecution_evidences != null) &&
                 (persecution_known != undefined) && (persecution_evidences != undefined) &&
                 (persecution_evidences.length != 0))
