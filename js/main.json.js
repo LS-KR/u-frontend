@@ -36,43 +36,44 @@ window.addEventListener('DOMContentLoaded', function() {
             names.forEach(function(e, i) {
                 var s;
                 if (i == 0)
-                    s = e;
+                    s = (e != undefined) ? e : "";
                 else
-                    s += '\n' + e;
+                    s += '\n' + (e != undefined) ? e : "";
                 c.lastChild.textContent = s;
             });
             c.appendChild(document.createElement('h4'));
             sites.forEach(function(e, i) {
                 var s;
                 if (i == 0)
-                    s = e;
+                    s = (e != undefined) ? e : "";
                 else
-                    s += '\n' + e;
+                    s += '\n' + (e != undefined) ? e : "";
                 c.lastChild.textContent = s;
             });
             c.appendChild(document.createElement('a'));
             c.lastChild.textContent = '点击展开详情';
             c.appendChild(document.createElement('div'));
             var d = c.lastChild;
+            d.classList.add('institution-info');
             d.appendChild(document.createElement('a'));
             locations.forEach(function(e, i) {
                 var s;
                 if (i == 0)
-                    s = e;
+                    s = (e != undefined) ? e : "";
                 else
-                    s += '\n' + e;
+                    s += '\n' + (e != undefined) ? e : "";
                 d.lastChild.textContent = '地址: \n' + s;
             });
             d.appendChild(document.createElement('a'));
             sources.forEach(function(e, i) {
                 var s;
                 if (i == 0)
-                    s = e;
+                    s = (e != undefined) ? e : "";
                 else 
-                    s += '\n' + e;
+                    s += '\n' + (e != undefined) ? e : "";
                 d.lastChild.textContent += '来源: \n' + s;
             });
-            if ((persecution_known != null) && (persecution_evidences != null))
+            if ((persecution_known != null) || (persecution_evidences != null))
             {
                 d.appendChild(document.createElement('a'));
                 if (persecution_known) 
