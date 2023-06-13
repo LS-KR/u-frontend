@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', function() {
             var checked = e.checked;
             var persecution_known  = null;
             var persecution_evidences = null;
+            var s = "";
             //var persecution_known = e.persecution.known as boolean;
             //var persecution_evidences = e.persecution.evidences as Array<string>;
             try {
@@ -33,46 +34,46 @@ window.addEventListener('DOMContentLoaded', function() {
             b.appendChild(b0);
             var c = b.children.item(0);
             c.appendChild(document.createElement('h1'));
+            s = "";
             names.forEach(function(e, i) {
-                var s;
                 if (i == 0)
                     s = (e != undefined) ? e : "";
                 else
-                    s += '\n' + (e != undefined) ? e : "";
-                c.lastChild.textContent = s;
+                    s = s.concat('\n', e);
             });
+            c.lastChild.textContent = s;
             c.appendChild(document.createElement('h4'));
+            s = "";
             sites.forEach(function(e, i) {
-                var s;
                 if (i == 0)
                     s = (e != undefined) ? e : "";
                 else
-                    s += '\n' + (e != undefined) ? e : "";
-                c.lastChild.textContent = s;
+                    s = s.concat('\n', e);
             });
+            c.lastChild.textContent = s;
             c.appendChild(document.createElement('a'));
             c.lastChild.textContent = '点击展开详情';
             c.appendChild(document.createElement('div'));
             var d = c.lastChild;
             d.classList.add('institution-info');
             d.appendChild(document.createElement('a'));
+            s = "";
             locations.forEach(function(e, i) {
-                var s;
                 if (i == 0)
                     s = (e != undefined) ? e : "";
                 else
-                    s += '\n' + (e != undefined) ? e : "";
-                d.lastChild.textContent = '地址: \n' + s;
+                    s = s.concat('\n', e);
             });
+            d.lastChild.textContent = '地址: \n' + s;
             d.appendChild(document.createElement('a'));
+            s = "";
             sources.forEach(function(e, i) {
-                var s;
                 if (i == 0)
                     s = (e != undefined) ? e : "";
                 else 
-                    s += '\n' + (e != undefined) ? e : "";
-                d.lastChild.textContent += '来源: \n' + s;
+                    s = s.concat('\n', e);
             });
+            d.lastChild.textContent += '来源: \n' + s;
             if ((persecution_known != null) && (persecution_evidences != null) &&
                 (persecution_known != undefined) && (persecution_evidences != undefined) &&
                 (persecution_evidences.length != 0))
