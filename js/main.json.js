@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function() {
             //var persecution_evidences = e.persecution.evidences as Array<string>;
             try {
                 persecution_known = e.persecution.known;
-                persecution_evidences = e,persecution.evidences;
+                persecution_evidences = e.persecution.evidences;
             }
             catch {}
             var o = document.querySelector('div#lists');
@@ -73,7 +73,9 @@ window.addEventListener('DOMContentLoaded', function() {
                     s += '\n' + (e != undefined) ? e : "";
                 d.lastChild.textContent += '来源: \n' + s;
             });
-            if ((persecution_known != null) || (persecution_evidences != null))
+            if ((persecution_known != null) && (persecution_evidences != null) &&
+                (persecution_known != undefined) && (persecution_evidences != undefined) &&
+                (persecution_evidences.length != 0))
             {
                 d.appendChild(document.createElement('a'));
                 if (persecution_known) 
