@@ -1,0 +1,25 @@
+
+p {
+    margin: 0px auto;
+}
+
+p.names {
+    font-size: large;
+}
+
+p.sites {
+    font-size: normal;
+}
+
+p.infos {
+    font-size: small;
+}
+
+p.info-titles {
+    font-size: medium;
+}
+
+a.persecution {
+    font-size: small;
+    color: #ff2e2f;
+}
